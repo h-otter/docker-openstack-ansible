@@ -1,6 +1,7 @@
 # openstack-ansible on docker
 
 - image size is about 650MB
+- for example [da25aed](https://github.com/h-otter/docker-openstack-ansible/tree/da25aed66ae6870916291bacc5fcfbaffe9c8639)
 
 ## build and launch
 
