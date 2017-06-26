@@ -7,7 +7,13 @@
 ```
 $ docker build --build-arg VAULT_PASS=hoge -t openstack-ansible:15.1.5 .
 $ docker run -v `pwd`/etc/:/etc/openstack_deploy openstack-ansible:15.1.5
+Variable files: "-e @/etc/openstack_deploy/user_secrets.yml -e @/etc/openstack_deploy/user_variables.yml "
+[DEPRECATION WARNING]: docker is kept for backwards compatibility but usage is discouraged. The module documentation details page may explain
+ more about this rationale..
+This feature will be removed in a future release. Deprecation warnings can be disabled by setting
+deprecation_warnings=False in ansible.cfg.
 
+playbook: setup-infrastructure.yml
 ```
 
 ## setup or initialize secret 
