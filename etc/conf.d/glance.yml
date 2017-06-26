@@ -1,9 +1,0 @@
----
-# glance
-# The settings here are repeated for each infra host.
-# They could instead be applied as global settings in
-# user_variables, but are left here to illustrate that
-# each container could have different storage targets.
-image_hosts:
-  com01:
-    ip: 172.16.65.1

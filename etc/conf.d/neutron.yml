@@ -1,8 +1,0 @@
----
-# neutron server, agents (L3, etc)
-network_hosts:
-  com01:
-    ip: 172.16.65.1
-  misc01:
-    ip: 172.16.65.2
-
