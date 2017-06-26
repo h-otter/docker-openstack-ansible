@@ -1,0 +1,8 @@
+---
+identity_hosts:
+  com01:
+    affinity:
+      keystone_container: 2
+    ip: 172.16.65.1
+  misc01:
+    ip: 172.16.65.2

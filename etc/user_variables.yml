@@ -1,0 +1,57 @@
+---
+
+openstack_host_specific_kernel_modules:
+  - name: "openvswitch"
+    pattern: "CONFIG_OPENVSWITCH="
+    group: "network_hosts"
+  - name: "kvm_intel"
+    pattern: "nested=1"
+    group: "nova_compute"
+
+# openstack_kernel_options:
+#   - { key: }
+
+# openstack_host_specific_kernel_modules:
+#   - { name: "kvm_intel", pattern: "nested=1", group: "nova_compute" }
+
+# lxc
+lxc_net_address: 172.16.127.254
+lxc_net_netmask: 255.255.255.0
+lxc_net_dhcp_range: 172.16.127.1,172.16.127.253
+lxc_cache_prep_dns:
+  - "{{ lxc_net_address }}"
+
+# haproxy
+haproxy_keepalived_external_vip_cidr: "172.17.0.192/24"
+haproxy_keepalived_internal_vip_cidr: "172.16.65.63/24"
+haproxy_keepalived_external_interface: br-life
+haproxy_keepalived_internal_interface: br-mgmt
+
+# horizon
+horizon_enable_trove_ui: True
+horizon_enable_designate_ui: True
+
+# neutron
+### Neutron specific config
+neutron_plugin_type: ml2.ovs.dvr
+
+# neutron_ml2_drivers_type: "flat,vlan"
+
+# neutron_provider_networks:
+#   network_flat_networks: "*"
+#   network_types: "vlan"
+#   network_vlan_ranges: "physnet1:102:199"
+#   network_mappings: "physnet1:br-provider"
+
+# nova
+nova_cpu_allocation_ratio: 10.0
+nova_disk_allocation_ratio: 5.0
+nova_max_instances_per_host: 50
+nova_max_io_ops_per_host: 10
+nova_ram_allocation_ratio: 1.0
+nova_ram_weight_multiplier: 5.0
+nova_reserved_host_disk_mb: 2048
+
+nova_supported_virt_types:
+  - kvm
+#  - lxd

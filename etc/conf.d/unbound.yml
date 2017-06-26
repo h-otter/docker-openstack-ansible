@@ -1,0 +1,8 @@
+---
+unbound_hosts:
+  com01:
+    ip: 172.16.65.1
+  misc01:
+    affinity:
+      unbound_container: 2
+    ip: 172.16.65.2

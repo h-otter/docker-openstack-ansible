@@ -2,11 +2,11 @@
 
 
 ```
-$ docker build ./ --build-arg VAULT_PASS=hoge
+$ docker build --build-arg VAULT_PASS=hoge -t openstack-ansible:15.1.4.2 .
 $ docker run
 ```
 
-## setup secret
+## setup secret 
 
 ```
 # cd /opt/openstack-ansible/scripts

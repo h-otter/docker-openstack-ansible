@@ -1,0 +1,12 @@
+---
+# nova api, conductor, etc services
+compute-infra_hosts:
+  com01:
+    ip: 172.16.65.1
+  misc01:
+    ip: 172.16.65.2
+
+# nova hypervisors
+compute_hosts:
+  com01:
+    ip: 172.16.65.1
