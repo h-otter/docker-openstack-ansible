@@ -1,6 +1,6 @@
 FROM ubuntu:latest
 
-MAINTAINER h-otter <h-otter@outlook.jp>
+LABEL maintainer "h-otter <h-otter@outlook.jp>"
 
 ARG OPENSTACK_VERSION="15.1.5"
 ARG VAULT_PASS
